@@ -2,16 +2,12 @@ package main
 
 import (
 	"fmt"
-	"html"
+	"github.com/shandilyamanvesh/CrudAPIInGo/router"
 	"log"
 	"net/http"
 )
 
 func main() {
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Print(r.URL)
-		fmt.Fprintf(w, "Hello, %q", html.EscapeString(r.URL.Path))
-	})
-
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	router := router.NewRouter()
+	log.Fatal(http.ListenAndServe(":8080", router))
 }
