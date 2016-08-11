@@ -4,6 +4,7 @@ import (
 	"github.com/shandilyamanvesh/CrudAPIInGo/controllers"
 )
 
+// All routes with their corresponding name,verb,url and http handler methods.
 var muxroutes = routes{
 	route{
 		"Index",

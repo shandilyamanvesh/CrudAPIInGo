@@ -5,6 +5,11 @@ import (
 	"net/http"
 )
 
+/*
+Function for initializing new router instance.
+Also takes routes array and maps this with respective handlers.
+*/
+
 func NewRouter() *mux.Router {
 	muxrouter := mux.NewRouter().StrictSlash(true)
 	for _, route := range muxroutes {
