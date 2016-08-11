@@ -2,6 +2,7 @@ package router
 
 import (
 	"github.com/gorilla/mux"
+	"github.com/shandilyamanvesh/CrudAPIInGo/logger"
 	"net/http"
 )
 
@@ -16,6 +17,7 @@ func NewRouter() *mux.Router {
 
 		var handler http.Handler
 		handler = route.handlerFunc
+		handler = logger.Logger(handler, route.name)
 
 		muxrouter.
 			Methods(route.method).
