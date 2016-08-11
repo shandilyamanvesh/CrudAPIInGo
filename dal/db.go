@@ -36,7 +36,7 @@ func GetBlogById(id int) (*models.Blog, error) {
 		}
 	}
 	// return error if not found
-	return nil, &models.Error{Msg: "No blog available at this Id."}
+	return nil, &models.Error{Msg: errMsg}
 }
 
 func UpdateBlogById(blog models.Blog) (*models.Blog, error) {
@@ -47,7 +47,7 @@ func UpdateBlogById(blog models.Blog) (*models.Blog, error) {
 		}
 	}
 	// return error if not found
-	return nil, &models.Error{Msg: "No blog available at this Id."}
+	return nil, &models.Error{Msg: errMsg}
 }
 
 func DeleteBlogById(id int) error {
@@ -58,5 +58,5 @@ func DeleteBlogById(id int) error {
 		}
 	}
 	// return error if not found
-	return &models.Error{Msg: "No blog available at this Id."}
+	return &models.Error{Msg: errMsg}
 }
