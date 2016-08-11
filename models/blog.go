@@ -5,7 +5,7 @@ import (
 )
 
 type Blog struct {
-	Id        int32     `json:"id"`
+	Id        int       `json:"id"`
 	Title     string    `json:"title"`
 	Author    string    `json:"author"`
 	Text      string    `json:"text"`

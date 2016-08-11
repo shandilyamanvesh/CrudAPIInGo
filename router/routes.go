@@ -25,9 +25,9 @@ var muxroutes = routes{
 		controllers.Show,
 	},
 	route{
-		"BlogSave",
+		"BlogCreate",
 		"POST",
 		"/blogs",
-		controllers.Save,
+		controllers.Create,
 	},
 }
