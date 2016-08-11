@@ -30,4 +30,16 @@ var muxroutes = routes{
 		"/blogs",
 		controllers.Create,
 	},
+	route{
+		"BlogUpdate",
+		"PUT",
+		"/blogs/{blogId}",
+		controllers.Update,
+	},
+	route{
+		"BlogDelete",
+		"DELETE",
+		"/blogs/{blogId}",
+		controllers.Delete,
+	},
 }
